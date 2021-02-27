@@ -1,0 +1,40 @@
+{
+  "name": "sgc-fireball/tinyframework-skeleton",
+  "license": "proprietary",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/sgc-fireball/tinyframework.git"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "sgc-fireball/tinyframework": "dev-master"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "TinyFramework\\Composer\\Hook::postInstallCommand"
+    ],
+    "post-update-cmd": [
+      "TinyFramework\\Composer\\Hook::postUpdateCommand"
+    ],
+    "serve": "@php -S 0.0.0.0:80 -t public/",
+    "analyse": [
+      "@php $(which composer) dump-autoload",
+      "@php vendor/bin/phpstan analyse"
+    ]
+  },
+  "scripts-descriptions": {
+    "serve": "Start php internal webservers for testing.",
+    "analyse": "Dump autoload and analyse the source with phpstan!"
+  }
+}
