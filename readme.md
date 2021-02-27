@@ -4,9 +4,8 @@
 
 ## How to start
 ```bash
-composer create-project --stability=dev --remove-vcs tinyframework/project my-project --repository="{\"url\": \"https://github.com/sgc-fireball/tinyframework-skeleton.git\", \"type\": \"vcs\"}" master
-cd my-project
-php console
+composer create-project --stability=dev --remove-vcs sgc-fireball/tinyframework-skeleton my-project --repository="{\"url\": \"https://github.com/sgc-fireball/tinyframework-skeleton.git\", \"type\": \"vcs\"}" master
+cd my-project; php console
 ```
 
 ## Author
