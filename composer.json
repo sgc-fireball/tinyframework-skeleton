@@ -36,5 +36,6 @@
   "scripts-descriptions": {
     "serve": "Start php internal webservers for testing.",
     "analyse": "Dump autoload and analyse the source with phpstan!"
-  }
+  },
+  "minimum-stability": "dev"
 }
