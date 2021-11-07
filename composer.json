@@ -17,9 +17,6 @@
     "php": ">=8.0",
     "sgc-fireball/tinyframework": "dev-master"
   },
-  "require-dev": {
-    "phpstan/phpstan": "^0.12"
-  },
   "scripts": {
     "post-install-cmd": [
       "TinyFramework\\Composer\\Hook::postInstallCommand"
@@ -27,15 +24,10 @@
     "post-update-cmd": [
       "TinyFramework\\Composer\\Hook::postUpdateCommand"
     ],
-    "serve": "@php -S 0.0.0.0:80 -t public/",
-    "analyse": [
-      "@php $(which composer) dump-autoload",
-      "@php vendor/bin/phpstan analyse"
-    ]
+    "serve": "@php -S 0.0.0.0:80 -t public/"
   },
   "scripts-descriptions": {
-    "serve": "Start php internal webservers for testing.",
-    "analyse": "Dump autoload and analyse the source with phpstan!"
+    "serve": "Start php internal webservers for testing."
   },
   "minimum-stability": "dev"
 }
